@@ -23,6 +23,13 @@ A collection of hands-on data science projects from the **Applied Data Science L
 - **Outlier Trimming & Scatterplots**: Applied quantile filtering to remove extreme outliers before plotting size-vs-price regression trends (`sns.regplot`).
 - **Small Multiples**: Faceted scatterplots by state to uncover regional market heterogeneity.
 
+#### 📈 [1.3 Correlation and Variable Relationships](./Hands-on%20Data%20Science%20in%20the%20Mexican%20Real%20Estate%20Market/1.3%20Correlation%20and%20Variable%20Relationships.ipynb)
+- **Pearson Correlation ($r$)**: Quantified linear relationships between numeric features, establishing a national baseline ($r \approx 0.59$) between property area and price.
+- **Correlation Matrix & Heatmaps**: Used `pandas.select_dtypes("number").corr()` and `seaborn.heatmap()` to visualize pairwise associations and identified non-actionable geographic artifacts (`lat` vs `lon`).
+- **Segmented Correlations**: Leveraged split-apply-combine (`groupby`, `corr`, `.iloc`, `.xs`) across states and property types (houses vs. apartments) to expose market heterogeneity.
+- **Simpson's Paradox**: Analyzed how aggregate national trends mask divergent local market dynamics (e.g., strong size-price relationships in rural states vs. weak relationships in dense urban centers like CDMX).
+- **Feature Engineering**: Engineered `price_per_m2` using `.assign()` and `lambda` functions to uncover non-linear diminishing returns of property size.
+
 ---
 
 ## Environment Setup
